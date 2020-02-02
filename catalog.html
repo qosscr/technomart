@@ -10,8 +10,9 @@
         <a href="index.html">
           <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт">
         </a>
-        <form>
-          <input type="text" placeholder="Поиск:">
+        <form action="https://echo.htmlacademy.ru/courses" method="POST" name="search">
+          <button type="submit" aria-label="Поиск по сайту"></button>
+          <input type="text" name="query" placeholder="Поиск:">
         </form>
         <a href="">Закладки: 0</a>
         <a href="">Корзина: 0</a>
@@ -24,16 +25,16 @@
           и инструментов для ремонта
         </p>
         <div>
-          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a href="tel:+78125550555" aria-label="Телефон интернет-магазина Техномарт">+7 (812) 555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div>
-          <a href="">
+          <a href="" aria-label="Открыть профиль">
             <span>Равшан Джамшутович</span>
           </a>
           <ul>
-            <li>Мои заказы</li>
-            <li>Личный кабинет</li>
+            <li><a href="">Мои заказы</a></li>
+            <li><a href="">Личный кабинет</a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +53,7 @@
 
     <main>
       <ul>
-        <li><a href="index.html"></a></li>
+        <li><a href="index.html" aria-label="Главная"></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="">Инструмент</a></li>
         <li><a href="">Перфораторы</a></li>
@@ -61,26 +62,53 @@
       <h1>Перфораторы</h1>
       <section>
         <h2>Фильтр:</h2>
-        <span>Цена:</span>
-        <input type="range" min="0" max="10">
-        <hr>
-        <span>Производители:</span>
-        <ul>
-          <li><input type="checkbox">Bosch</li>
-          <li><input type="checkbox">Интерскол</li>
-          <li><input type="checkbox">Makita</li>
-          <li><input type="checkbox">Dewalt</li>
-          <li><input type="checkbox">Hitachi</li>
-        </ul>
-        <hr>
-        <span>Питание:</span>
-        <ul>
-          <li><input type="radio" name="power">Аккумуляторные</li>
-          <li><input type="radio" name="power">Сетевые</li>
-        </ul>
-        <button type="button">Показать</button>
+        <form action="https://echo.htmlacademy.ru/courses" method="POST" name="filter">
+          <fieldset>
+            <legend>Цена:</legend>
+            <div>
+              <a href=""></a>
+              <a href=""></a>
+            </div>
+            <div>
+              <input type="number" value="0" name="price-min">
+              <input type="number" value="10" name="price-max">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <label><input type="checkbox" name="bosch" checked>Bosch</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="interskol">Интерскол</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="makita" checked>Makita</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="dewalt">Dewalt</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li>
+                <label><input type="radio" name="power" value="accumulator" checked>Аккумуляторные</label>
+              </li>
+              <li>
+                <label><input type="radio" name="power" value="power-line">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
-      <section>
+      <section aria-label="Каталог товаров">
         <section>
           <h3>Сортировка:</h3>
           <ul>
@@ -182,6 +210,14 @@
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
       </article>
+      <section>
+        <h2>Товар добавлен в корзину!</h2>
+        <ul>
+          <li><a href="">Оформить заказ</a></li>
+          <li><button type="button">Продолжить покупки</button></li>
+        </ul>
+        <button type="button" aria-label="Продолжить покупки">X</button>
+      </section>
     </main>
 
     <footer>
