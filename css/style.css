@@ -1,0 +1,276 @@
+/*
+* GLOBAL STYLES
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.button {
+    height: 38px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ee3643;
+    color: white;
+    border-radius: 3px;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ca2c37;
+}
+
+.button:active {
+    background-color: #ba2732;
+}
+
+.wrapper {
+    width: 940px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/*
+* HEADER TOP STYLES
+*/
+
+.header {
+    background-color: #f4f7f9;
+}
+
+.header-top {
+    background-color: #293449;
+    height: 42px;
+
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.button--header-top {
+    border-radius: 0;
+    height: 100%;
+    background-color: inherit;
+    width: 150px;
+    text-transform: none;
+}
+
+.header-top .svg-icon {
+    width: 15px;
+    height: 100%;
+    margin: 0 13px 2px 0;
+    border: 0;
+    fill: white;
+    opacity: 30%;
+}
+
+.button--header-top:hover {
+    background-color: #212a3a;
+}
+
+.button--header-top:hover .svg-icon {
+    opacity: 100%;
+}
+
+.button--header-top:active {
+    background-color: #161d29;
+    color: #FFFFFF80;
+}
+
+.button--header-top:active .svg-icon {
+    opacity: 30%;
+}
+
+.button--checkout {
+    background-color: #63a63e;
+}
+
+.button--checkout:hover {
+    background-color: #5fbb2d;
+}
+
+.button--checkout:active {
+    background-color: #518534;
+}
+
+.header-top__search {
+    position: relative;
+    width: 270px;
+    height: 100%;
+}
+
+.header-top .search-icon {
+    width: 17px;
+}
+
+.header-top__search:focus {
+    background-color: white;
+}
+
+.header-top__search input {
+    background-color: inherit;
+    padding: 0 10px 0 49px;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+}
+
+.header-top__search:hover {
+    background-color: #212a3a;
+}
+
+.header-top__search:hover .svg-icon {
+    opacity: 100%;
+}
+
+.header-top__search input:focus {
+    background-color: white;
+    color: black;
+}
+
+.header-top__search:focus .svg-icon {
+    fill: #ee3643;
+}
+
+.header-top__search input::placeholder {
+    color: white;
+}
+
+.header-top__search input[type="submit"] {
+    display: none;
+}
+
+.search-submit {
+    position: absolute;
+    height: 100%;
+    width: 49px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.search-submit .svg-icon {
+    margin: 0;
+}
+
+.header-top__logo {
+    width: 220px;
+    height: 100%;
+    background-color: #ee3643;
+    box-shadow: 0px 5px 0px 0px #b62530;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top__logo:hover {
+    cursor: pointer;
+    background-color: #ca2c37;
+}
+
+.header-top__logo:active {
+    cursor: pointer;
+    background-color: #ba2732;
+}
+
+/*
+* HEADER MIDDLE STYLES
+*/
+
+.header-info {
+    margin-top: 46px;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.header-info .wrapper {
+    justify-content: space-between;
+    margin-top: 46px;
+}
+
+.header-info__contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-info__caption {
+    font-style: italic;
+    margin-top: 4px;
+    color: #ee3643;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.header-info__phone {
+    display: block;
+    color: #e9292a;
+    width: 270px;
+    height: 45px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 9px;
+}
+
+.header-info__address {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.header-info__user {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+.header-info__user button {
+    background-color: white;
+    text-transform: none;
+    height: 45px;
+    color: black;
+}
+
+.header-info__user button:hover {
+    background-color: white;
+    color: #ee3643;
+}
+
+.header-info__user button:active {
+    background-color: white;
+    color: #00000080;
+    outline: none;
+}
+
+.header-info__user .button--sign-in {
+    width: 121px;
+    margin-right: 10px;
+
+}
