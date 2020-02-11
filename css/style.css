@@ -80,7 +80,7 @@ main {
     text-transform: none;
 }
 
-.header-top .svg-icon {
+.header-top__icon {
     width: 15px;
     height: 100%;
     margin: 0 13px 2px 0;
@@ -93,7 +93,7 @@ main {
     background-color: #212a3a;
 }
 
-.button--header-top:hover .svg-icon {
+.button--header-top:hover .header-top__icon {
     opacity: 100%;
 }
 
@@ -102,7 +102,7 @@ main {
     color: #FFFFFF80;
 }
 
-.button--header-top:active .svg-icon {
+.button--header-top:active .header-top__icon {
     opacity: 30%;
 }
 
@@ -124,10 +124,6 @@ main {
     height: 100%;
 }
 
-.header-top .search-icon {
-    width: 17px;
-}
-
 .header-top__search:focus {
     background-color: white;
 }
@@ -146,8 +142,12 @@ main {
     background-color: #212a3a;
 }
 
-.header-top__search:hover .svg-icon {
+.header-top__search:hover .header-top__icon {
     opacity: 100%;
+}
+
+.header-top__icon--search {
+    width: 17px;
 }
 
 .header-top__search input:focus {
@@ -155,7 +155,7 @@ main {
     color: black;
 }
 
-.header-top__search input:focus + .search-submit .svg-icon {
+.header-top__search input:focus + .header-top__search-submit .header-top__icon--search {
     fill: #ee3643;
     opacity: 100%;
 }
@@ -164,11 +164,11 @@ main {
     color: white;
 }
 
-.header-top__search input[type="submit"] {
+.header-top__search-submit-btn {
     display: none;
 }
 
-.search-submit {
+.header-top__search-submit {
     position: absolute;
     top: 0;
     height: 100%;
@@ -178,7 +178,7 @@ main {
     justify-content: center;
 }
 
-.search-submit .svg-icon {
+.header-top__icon--search {
     margin: 0;
 }
 
