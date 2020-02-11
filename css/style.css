@@ -155,8 +155,9 @@ main {
     color: black;
 }
 
-.header-top__search:focus .svg-icon {
+.header-top__search input:focus + .search-submit .svg-icon {
     fill: #ee3643;
+    opacity: 100%;
 }
 
 .header-top__search input::placeholder {
@@ -169,6 +170,7 @@ main {
 
 .search-submit {
     position: absolute;
+    top: 0;
     height: 100%;
     width: 49px;
     cursor: pointer;
