@@ -213,11 +213,11 @@ main {
 }
 
 .header-info .wrapper {
-    justify-content: space-between;
-    margin-top: 46px;
+    align-items: flex-start;
 }
 
 .header-info__contacts {
+    margin-left: 71px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -225,10 +225,11 @@ main {
 
 .header-info__caption {
     font-style: italic;
-    margin-top: 4px;
     color: #ee3643;
     font-size: 16px;
     line-height: 23px;
+    margin: 0 0 1px 53px;
+    align-self: flex-end;
 }
 
 .header-info__phone {
@@ -244,34 +245,35 @@ main {
 .header-info__address {
     font-size: 14px;
     line-height: 24px;
-    margin: 0;
+    margin: 5px 0 0;
 }
 
-.header-info__user {
+.header-info__auth {
     list-style: none;
     margin: 0;
+    margin-left: auto;
     display: flex;
 }
 
-.header-info__user button {
+.header-info__auth button {
     background-color: white;
     text-transform: none;
     height: 45px;
     color: black;
 }
 
-.header-info__user button:hover {
+.header-info__auth button:hover {
     background-color: white;
     color: #ee3643;
 }
 
-.header-info__user button:active {
+.header-info__auth button:active {
     background-color: white;
     color: #00000080;
     outline: none;
 }
 
-.header-info__user .button--sign-in {
+.header-info__auth .button--sign-in {
     width: 121px;
     margin-right: 10px;
 
