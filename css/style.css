@@ -233,13 +233,18 @@ main {
 }
 
 .header-info__phone {
-    display: block;
+    display: flex;
+    align-items: center;
     color: #e9292a;
     width: 270px;
     height: 45px;
     border: 3px solid white;
-    text-align: center;
-    padding: 9px;
+}
+
+.header-info__phone-icon {
+    fill: #B7BFC8;
+    margin: 0 40px 0 15px;
+    height: 19px;
 }
 
 .header-info__address {
