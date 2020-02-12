@@ -64,7 +64,7 @@ main {
     background-color: #f4f7f9;
 }
 
-.header-top {
+.top-line {
     background-color: #293449;
     height: 42px;
 
@@ -72,7 +72,7 @@ main {
     line-height: 18px;
 }
 
-.button--header-top {
+.top-line .button {
     border-radius: 0;
     height: 100%;
     background-color: inherit;
@@ -80,7 +80,7 @@ main {
     text-transform: none;
 }
 
-.header-top__icon {
+.top-line__icon {
     width: 15px;
     height: 100%;
     margin: 0 13px 2px 0;
@@ -89,46 +89,46 @@ main {
     opacity: 30%;
 }
 
-.button--header-top:hover {
+.top-line .button:hover {
     background-color: #212a3a;
 }
 
-.button--header-top:hover .header-top__icon {
+.top-line .button:hover .top-line__icon {
     opacity: 100%;
 }
 
-.button--header-top:active {
+.top-line .button:active {
     background-color: #161d29;
     color: #FFFFFF80;
 }
 
-.button--header-top:active .header-top__icon {
+.top-line .button:active .top-line__icon {
     opacity: 30%;
 }
 
-.button--checkout {
+.top-line .button--checkout {
     background-color: #63a63e;
 }
 
-.button--checkout:hover {
+.top-line .button--checkout:hover {
     background-color: #5fbb2d;
 }
 
-.button--checkout:active {
+.top-line .button--checkout:active {
     background-color: #518534;
 }
 
-.header-top__search {
+.top-line__search {
     position: relative;
     width: 270px;
     height: 100%;
 }
 
-.header-top__search:focus {
+.top-line__search:focus {
     background-color: white;
 }
 
-.header-top__search input {
+.top-line__search .top-line__input {
     background-color: inherit;
     padding: 0 10px 0 49px;
     border: 0;
@@ -138,37 +138,33 @@ main {
     color: white;
 }
 
-.header-top__search:hover {
+.top-line__search:hover {
     background-color: #212a3a;
 }
 
-.header-top__search:hover .header-top__icon {
+.top-line__search:hover .top-line__icon {
     opacity: 100%;
 }
 
-.header-top__icon--search {
-    width: 17px;
-}
-
-.header-top__search input:focus {
+.top-line__search .top-line__input:focus {
     background-color: white;
     color: black;
 }
 
-.header-top__search input:focus + .header-top__search-submit .header-top__icon--search {
+.top-line__search .top-line__input:focus + .top-line__label .top-line__icon {
     fill: #ee3643;
     opacity: 100%;
 }
 
-.header-top__search input::placeholder {
+.top-line__search .top-line__input::placeholder {
     color: white;
 }
 
-.header-top__search-submit-btn {
+.top-line__submit {
     display: none;
 }
 
-.header-top__search-submit {
+.top-line__label {
     position: absolute;
     top: 0;
     height: 100%;
@@ -178,11 +174,12 @@ main {
     justify-content: center;
 }
 
-.header-top__icon--search {
+.top-line__search .top-line__icon {
+    width: 17px;
     margin: 0;
 }
 
-.header-top__logo {
+.top-line__logo {
     width: 220px;
     height: 100%;
     background-color: #ee3643;
@@ -192,12 +189,12 @@ main {
     justify-content: center;
 }
 
-.header-top__logo:hover {
+.top-line__logo:hover {
     cursor: pointer;
     background-color: #ca2c37;
 }
 
-.header-top__logo:active {
+.top-line__logo:active {
     cursor: pointer;
     background-color: #ba2732;
 }
@@ -206,24 +203,24 @@ main {
 * HEADER MIDDLE STYLES
 */
 
-.header-info {
+.info {
     margin-top: 46px;
     font-size: 21px;
     line-height: 21px;
 }
 
-.header-info .wrapper {
+.info .wrapper {
     align-items: flex-start;
 }
 
-.header-info__contacts {
+.info__contacts {
     margin-left: 71px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.header-info__caption {
+.info__caption {
     font-style: italic;
     color: #ee3643;
     font-size: 16px;
@@ -232,7 +229,7 @@ main {
     align-self: flex-end;
 }
 
-.header-info__phone {
+.info__phone {
     display: flex;
     align-items: center;
     color: #e9292a;
@@ -241,45 +238,41 @@ main {
     border: 3px solid white;
 }
 
-.header-info__phone-icon {
+.info__phone .info__icon {
     fill: #B7BFC8;
     margin: 0 40px 0 15px;
     height: 19px;
 }
 
-.header-info__address {
+.info__address {
     font-size: 14px;
     line-height: 24px;
     margin: 5px 0 0;
 }
 
-.header-info__auth {
+.info__auth {
     list-style: none;
     margin: 0;
     margin-left: auto;
     display: flex;
 }
 
-.header-info__auth button {
+.info__auth .button {
     background-color: white;
     text-transform: none;
     height: 45px;
     color: black;
+    margin-left: 10px;
+    width: 150px;
 }
 
-.header-info__auth button:hover {
+.info__auth .button:hover {
     background-color: white;
     color: #ee3643;
 }
 
-.header-info__auth button:active {
+.info__auth .button:active {
     background-color: white;
     color: #00000080;
     outline: none;
-}
-
-.header-info__auth .button--sign-in {
-    width: 121px;
-    margin-right: 10px;
-
 }
