@@ -206,13 +206,10 @@ main {
 */
 
 .info-line {
+  align-items: flex-start;
   margin-top: 46px;
   font-size: 21px;
   line-height: 21px;
-}
-
-.wrapper--info-line {
-  align-items: flex-start;
 }
 
 .info-line__contacts {
@@ -266,6 +263,32 @@ main {
   color: black;
   margin-left: 10px;
   width: 150px;
+  position: relative;
+}
+
+.info-line__button--login {
+  width: 121px;
+}
+
+.info-line__button--login::before {
+  content: "";
+
+  width: 20px;
+  height: 17px;
+  margin-right: 14px;
+
+  background-image: url("../img/icons/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.info-line__button--login:hover::before {
+  opacity: 1;
+}
+
+.info-line__button--login::before,
+.info-line__button--login:active::before {
+  opacity: 0.3;
 }
 
 .info-line__button:hover {
@@ -277,4 +300,45 @@ main {
   background-color: white;
   color: #00000080;
   outline: none;
+}
+
+/*
+* HEADER NAV STYLES
+*/
+
+.nav__list {
+  margin: 40px 0 60px;
+  padding: 0 20px;
+  list-style: none;
+  font-size: 17px;
+  line-height: 17px;
+  background-color: #32425c;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  box-shadow: inset 0px -5px 0px 0px #293449;
+}
+
+.nav__item {
+  flex: 1;
+}
+
+.nav__item:hover {
+  background-color: #243047;
+}
+
+.nav__item:active {
+  background-color: #1d2739;
+}
+
+.nav__item a {
+  display: block;
+  text-align: center;
+  padding: 20px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav__item:active a {
+  color: #ffffff80;
 }
