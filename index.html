@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -66,15 +67,15 @@
       <h1 class="visually-hidden">Компания «Техномарт»</h1>
       <section class="promo wrapper" aria-label="Промо-блок">
         <ul class="promo__list">
-          <li class="promo__item promo__item--materials promo__item--new">
+          <li class="promo__item promo__item--orange promo__item--new">
             <h3 class="promo__header">Материалы</h3>
             <a class="button promo__button" href="" aria-label="материалы на любой вкус">На любой вкус</a>
           </li>
-          <li class="promo__item promo__item--tool">
+          <li class="promo__item promo__item--blue">
             <h3 class="promo__header">Инструмент</h3>
             <a class="button promo__button" href="" aria-label="Инструмент на все случаи">На все случаи</a>
           </li>
-          <li class="promo__item promo__item--equipment">
+          <li class="promo__item promo__item--purple">
             <h3 class="promo__header">Техника</h3>
             <a class="button promo__button" href="" aria-label="Техника для стройки">Для стройки</a>
           </li>
@@ -92,62 +93,88 @@
           </figure>
           <button class="catalog-slider__control" type="button" aria-label="Предыдущий слайд"></button>
           <button class="catalog-slider__control catalog-slider__control--next" type="button" aria-label="Следующий слайд"></button>
-          <a class="button catalog-slider__button" href="catalog.html">Открыть каталог</a>
+          <ul class="catalog-slider__pagination">
+            <li><button class="catalog-slider__tab" type="button"></button></li>
+            <li><button class="catalog-slider__tab catalog-slider__tab--active" type="button"></button></li>
+          </ul>
+          <a class="button button--red catalog-slider__button" href="catalog.html">Открыть каталог</a>
         </section>
         <ul class="promo__list promo__list--vertical">
-          <li class="promo__item promo__item--discount">
+          <li class="promo__item promo__item--green">
             <h3 class="promo__header">Скидки 50%</h3>
             <a class="button promo__button" href="" aria-label="Скидки 50% на 350 товаров">На 350 товаров</a>
           </li>
-          <li class="promo__item promo__item--delivery">
+          <li class="promo__item promo__item--orange">
             <h3 class="promo__header">Доставка</h3>
             <a class="button promo__button" href="" aria-label="Доставка бесплатно">Бесплатно</a>
           </li>
         </ul>
       </section>
-      <section class="popular">
+      <section class="popular wrapper">
         <div class="popular__headline">
           <h2 class="popular__header">Популярные товары:</h2>
-          <a class="button popular__button" href="">Все популярные товары</a>
+          <a class="button button--red popular__button" href="">Все популярные товары</a>
         </div>
-        <ul class="popular__products products">
+        <ul class="popular__products products wrapper">
           <li class="products__item">
+            <div class="products__buttons">
+              <button class="button products__button products__button--buy" type="button">Купить</button>
+              <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+            </div>
             <img class="products__img" src="img/item-image-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
-            <h3 class="products__header">
-              <a href="">Перфоратор BOSCH BFG 9000</a>
-            </h3>
-            <p class="products__discount">32500 Р.</p>
-            <p class="products__price">25500 Р.</p>
+            <div class="products__info">
+              <h3 class="products__header">
+                <a href="">Перфоратор BOSCH BFG 9000</a>
+              </h3>
+              <p class="products__discount">32500 Р.</p>
+              <p class="products__price">25500 Р.</p>
+            </div>
           </li>
           <li class="products__item">
+            <div class="products__buttons">
+              <button class="button products__button products__button--buy" type="button">Купить</button>
+              <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+            </div>
             <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            <h3 class="products__header">
-              <a href="">Перфоратор BOSCH BFG 3000</a>
-            </h3>
-            <p class="products__discount">22500 Р.</p>
-            <p class="products__price">15500 Р.</p>
+            <div class="products__info">
+              <h3 class="products__header">
+                <a href="">Перфоратор BOSCH BFG 3000</a>
+              </h3>
+              <p class="products__discount">22500 Р.</p>
+              <p class="products__price">15500 Р.</p>
+            </div>
           </li>
           <li class="products__item">
+            <div class="products__buttons">
+              <button class="button products__button products__button--buy" type="button">Купить</button>
+              <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+            </div>
             <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-            <h3 class="products__header">
-              <a href="">Перфоратор BOSCH BFG 6000</a>
-            </h3>
-            <p class="products__discount">30500 Р.</p>
-            <p class="products__price">25500 Р.</p>
+            <div class="products__info">
+              <h3 class="products__header">
+                <a href="">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <p class="products__discount">30500 Р.</p>
+              <p class="products__price">25500 Р.</p>
+            </div>
           </li>
-          <li class="products__item">
+          <li class="products__item products__item--new">
+            <div class="products__buttons">
+              <button class="button products__button products__button--buy" type="button">Купить</button>
+              <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+            </div>
             <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-            <h3 class="products__header">
-              <a href="">Перфоратор BOSCH BFG 2000</a>
-            </h3>
-            <p class="products__price">12500 Р.</p>
+            <div class="products__info">
+              <h3 class="products__header">
+                <a href="">Перфоратор BOSCH BFG 2000</a>
+              </h3>
+              <p class="products__price">12500 Р.</p>
+            </div>
           </li>
         </ul>
-      </section>
-      <section class="popular">
         <div class="popular__headline">
           <h2 class="popular__header">Популярные производители:</h2>
-          <a class="button popular__button" href="">Все производители</a>
+          <a class="button button--red popular__button" href="">Все производители</a>
         </div>
         <ul class="popular__vendors vendors">
           <li class="vendors__item">
@@ -192,45 +219,66 @@
           </li>
         </ul>
       </section>
-      <article class="about-us">
-        <h2 class="about-us__header">Сервисы</h2>
-        <p class="about-us__text">
-          Хороший интернет-магазин отличается от плохого не только ценами!<br>
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-        <section class="about-us__slider services-slider">
-          <ul class="services-slider__nav">
-            <li class="services-slider__item">
-              <button class="services-slider__button" type="button">Доставка</button>
-            </li>
-            <li class="services-slider__item">
-              <button class="services-slider__button" type="button">Гарантия</button>
-            </li>
-            <li class="services-slider__item">
-              <button class="services-slider__button" type="button">Кредит</button>
-            </li>
-          </ul>
-          <div class="services-slider__slide services-slider__slide--active">
-            <h3 class="services-slider__header">Доставка</h3>
-            <p class="services-slider__text">
-              Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!<br>
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
-            </p>
-            <img class="services-slider__img" src="img/delivery.jpg" width="468" height="261" alt="Доставка">
-          </div>
-        </section>
+      <article class="background-container">
+        <div class="about-us wrapper">
+          <h2 class="about-us__header">Сервисы</h2>
+          <p class="about-us__text">
+            Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
+          <section class="about-us__slider services-slider">
+            <ul class="services-slider__nav">
+              <li class="services-slider__item">
+                <button class="button services-slider__slide-button services-slider__slide-button--active" type="button">Доставка</button>
+              </li>
+              <li class="services-slider__item">
+                <button class="button services-slider__slide-button" type="button">Гарантия</button>
+              </li>
+              <li class="services-slider__item">
+                <button class="button services-slider__slide-button" type="button">Кредит</button>
+              </li>
+            </ul>
+            <div class="services-slider__slide services-slider__slide--active">
+              <h3 class="services-slider__header">Доставка</h3>
+              <p class="services-slider__text">
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
+              </p>
+              <img class="services-slider__img" src="img/services-slider/delivery.png" width="468" height="261" alt="Доставка">
+            </div>
+            <div class="services-slider__slide">
+              <h3 class="services-slider__header">Гарантия</h3>
+              <p class="services-slider__text">
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием,<br>
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
+              <img class="services-slider__img" src="img/services-slider/guarantee.png" width="468" height="261" alt="Гарантия">
+            </div>
+            <div class="services-slider__slide">
+              <h3 class="services-slider__header">Доставка</h3>
+              <p class="services-slider__text">
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <button class="button button--red services-slider__button" type="button">Отправить заявку</button>
+              <img class="services-slider__img" src="img/services-slider/credit.png" width="468" height="261" alt="Кредит">
+            </div>
+          </section>
+        </div>
       </article>
-      <section class="article-wrapper">
-        <article class="about-us about-us--transparent">
+      <section class="wrapper wrapper--two-columns">
+        <article class="about-us">
           <h2 class="about-us__header">Компания «Техномарт»</h2>
           <p class="about-us__text">
-            Настоящий мужской шоппинг начинается здесь!
-            Огромный выбор товаров для ремонта и строительства
-            не оставит равнодушными любителей сэкономить на гастарбайтерах.
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br>
+            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
           </p>
-          <p>
+          <p class="about-us__text">
             Мы можем доставить ваш товар в самые отдаленные точки России!<br>
             Техномарт работает со многими транспортными компаниями:
           </p>
@@ -239,9 +287,9 @@
             <li class="about-us__item">Автотрейдинг</li>
             <li class="about-us__item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button about-us__button" href="">Подробнее о компании</a>
+          <a class="button button--red about-us__button" href="">Подробнее о компании</a>
         </article>
-        <article class="about-us about-us--transparent">
+        <article class="about-us">
           <h2 class="about-us__header">Контакты</h2>
           <p class="about-us__text">
             Вы можете забрать товар сами,<br>
@@ -252,7 +300,7 @@
               <img class="about-us__img" src="img/map.jpg" width="300" height="158" alt="Расположение офиса компании «Техномарт»">
             </a>
           </figure>
-          <button class="button about-us__button about-us__button--wide" type="button">Заблудились? Напишите нам!</button>
+          <button class="button button--red button--wide about-us__button" type="button">Заблудились? Напишите нам!</button>
         </article>
       </section>
     </main>
