@@ -265,6 +265,7 @@ input[type="radio"].visually-hidden {
   line-height: 23px;
   margin: 0 0 1px 53px;
   align-self: flex-end;
+  min-width: 197px;
 }
 
 .info-line__phone {
