@@ -1354,3 +1354,35 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   padding: 32px 30px 34px;
 }
+
+/*
+* FILTERS STYLES
+*/
+
+.filters {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.filters__headline {
+  background-color: #f7f3ec;
+  padding: 10px 14px 10px 18px;
+  display: flex;
+}
+
+.filters__headline,
+.filters__header {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'PT Sans', Arial, sans-serif;
+}
+
+.filters__header {
+  margin: 0;
+}
+
+.filters--sorting {
+  width: 100%;
+}
