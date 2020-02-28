@@ -737,6 +737,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .products__item {
@@ -1360,7 +1361,7 @@ input[type="radio"].visually-hidden {
 */
 
 .filters {
-  width: 220px;
+  flex: 0 0 220px;
   margin-right: 20px;
 }
 
