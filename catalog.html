@@ -387,9 +387,28 @@
       <h2 class="modal__header modal__header--basket">Товар добавлен в корзину!</h2>
       <footer class="modal__footer">
         <button class="button button--red modal__button" type="button">Оформить заказ</button>
-        <button class="button button--default modal__button" type="button">Продолжить покупки</button>
+        <button class="button button--continue modal__button" type="button">Продолжить покупки</button>
       </footer>
       <button class="modal__close" type="button" aria-label="Продолжить покупки"></button>
     </aside>
+
+    <script>
+      const buyButtons = document.querySelectorAll('.products__button--buy');
+      const basketPopup = document.querySelector('.modal--basket');
+      const closePopupButtons = document.querySelectorAll('.modal__close');
+      const continueButton = document.querySelector('.button--continue');
+
+      [...buyButtons].forEach((button) => {
+        button.addEventListener('click', () => basketPopup.classList.add('modal--show'));
+      });
+
+      continueButton.addEventListener('click', () => basketPopup.classList.remove('modal--show'));
+
+      [...closePopupButtons].forEach((closeButton) => {
+        closeButton.addEventListener('click', () => {
+          document.querySelector('.modal--show').classList.remove('modal--show');
+        });
+      });
+    </script>
   </body>
 </html>

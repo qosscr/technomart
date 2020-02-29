@@ -311,11 +311,11 @@
             заехав в наш офис:
           </p>
           <figure class="about-us__map">
-            <a class="about-us__link" href="http://maps.google.com/" target="_blank">
+            <a class="about-us__link" href="https://goo.gl/maps/SC6cJ46nkdFoatwv7" target="_blank">
               <img class="about-us__img" src="img/map.jpg" width="300" height="158" alt="Расположение офиса компании «Техномарт»">
             </a>
           </figure>
-          <button class="button button--red button--wide about-us__button" type="button">Заблудились? Напишите нам!</button>
+          <button class="button button--red button--wide button--feedback about-us__button" type="button">Заблудились? Напишите нам!</button>
         </article>
       </section>
     </main>
@@ -376,16 +376,10 @@
     </footer>
 
     <aside class="modal modal--map" aria-label="Карта с расположением офиса компания «Техномарт»">
-      <img
-        class="modal__map"
-        src="img/full-map.jpg"
-        width="940"
-        height="446"
-        alt="Офис компании «Техномарт» находится по адресу - г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
-      >
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A239e06bddcf3693390556e6b6750321b4ac65a35c44db38f253a1426a2fffe5f&amp;source=constructor" width="940" height="446" frameborder="0"></iframe>
       <button class="modal__close" type="button" aria-label="Закрыть всплывающее окно с картой"></button>
     </aside>
-    <aside class="modal" aria-label="Форма обратной связи">
+    <aside class="modal modal--feedback" aria-label="Форма обратной связи">
       <form class="modal__form" action="https://echo.htmlacademy.ru/courses" method="POST" name="feedback">
         <div class="modal__main">
           <div class="modal__input-group">
@@ -409,5 +403,61 @@
       </form>
       <button class="modal__close" type="button" aria-label="Закрыть всплывающее окно с обратной связью"></button>
     </aside>
+    <aside class="modal modal--basket">
+      <h2 class="modal__header modal__header--basket">Товар добавлен в корзину!</h2>
+      <footer class="modal__footer">
+        <a class="button button--red modal__button" href="">Оформить заказ</a>
+        <button class="button button--continue modal__button" type="button">Продолжить покупки</button>
+      </footer>
+      <button class="modal__close" type="button" aria-label="Продолжить покупки"></button>
+    </aside>
+
+    <script>
+      // popups
+      const buyButtons = document.querySelectorAll('.products__button--buy');
+      const feedbackButton = document.querySelector('.button--feedback');
+      const mapLink = document.querySelector('.about-us__link');
+
+      const basketPopup = document.querySelector('.modal--basket');
+      const mapPopup = document.querySelector('.modal--map');
+      const feedbackPopup = document.querySelector('.modal--feedback');
+
+      const closePopupButtons = document.querySelectorAll('.modal__close');
+      const continueButton = document.querySelector('.button--continue');
+
+      [...buyButtons].forEach((button) => {
+        button.addEventListener('click', () => basketPopup.classList.add('modal--show'));
+      });
+      feedbackButton.addEventListener('click', () => feedbackPopup.classList.add('modal--show'));
+      mapLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        mapPopup.classList.add('modal--show');
+      });
+
+      continueButton.addEventListener('click', () => basketPopup.classList.remove('modal--show'));
+
+      [...closePopupButtons].forEach((closeButton) => {
+        closeButton.addEventListener('click', () => {
+          document.querySelector('.modal--show').classList.remove('modal--show');
+        });
+      });
+
+      // catalog slider
+      let currentCatalogSlideId = 0;
+      const catalogSlides = document.querySelectorAll('.catalog-slider__slide');
+      const prevSlideButton = document.querySelector('.catalog-slider__control');
+      const nextSlideButton = document.querySelector('.catalog-slider__control--next');
+
+
+      const switchToNextSlide = (id) => {
+        [...catalogSlides].forEach(slide => slide.classList.remove('catalog-slider__slide--active'));
+
+        currentCatalogSlideId = id >= 0 ? id % catalogSlides.length : catalogSlides.length - 1;
+        const nextSlide = catalogSlides[currentCatalogSlideId]
+          .classList.add('catalog-slider__slide--active');
+      }
+      nextSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId + 1));
+      prevSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId - 1));
+    </script>
   </body>
 </html>
