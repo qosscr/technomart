@@ -1723,7 +1723,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__price-input {
-  padding-left: 20px;
   background-color: #f7f3ec;
   border: none;
   font-size: 17px;

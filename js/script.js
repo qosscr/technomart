@@ -9,7 +9,7 @@ const basketInfo = document.querySelector('.top-line__button--basket');
 
 const bookmarkButtons = document.querySelectorAll('.products__button--bookmark');
 
-Array.prototype.slice.call(bookmarkButtons).forEach(button => {
+[...bookmarkButtons].forEach(button => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
     const productId = e.target.dataset.productId;
@@ -31,7 +31,7 @@ const mapPopup = document.querySelector('.modal--map');
 const closePopupButtons = document.querySelectorAll('.modal__close');
 const continueButton = document.querySelector('.button--continue');
 
-Array.prototype.slice.call(buyButtons).forEach((button) => {
+[...buyButtons].forEach((button) => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
     basketPopup.classList.add('modal--show');
@@ -54,7 +54,7 @@ continueButton.addEventListener('click', (e) => {
   basketPopup.classList.remove('modal--show');
 });
 
-Array.prototype.slice.call(closePopupButtons).forEach((closeButton) => {
+[...closePopupButtons].forEach((closeButton) => {
   closeButton.addEventListener('click', () => {
     document.querySelector('.modal--show').classList.remove('modal--show');
   });
@@ -109,8 +109,8 @@ if (catalogSlides.length) {
   let currentCatalogSlideId = 0;
 
   const switchToNextSlide = (id) => {
-    Array.prototype.slice.call(catalogSlides).forEach(slide => slide.classList.remove('catalog-slider__slide--active'));
-    Array.prototype.slice.call(catalogTabs).forEach(slide => slide.classList.remove('catalog-slider__tab--active'));
+    [...catalogSlides].forEach(slide => slide.classList.remove('catalog-slider__slide--active'));
+    [...catalogTabs].forEach(slide => slide.classList.remove('catalog-slider__tab--active'));
 
     currentCatalogSlideId = id >= 0 ? id % catalogSlides.length : catalogSlides.length - 1;
 
@@ -118,7 +118,7 @@ if (catalogSlides.length) {
     catalogTabs[currentCatalogSlideId].classList.add('catalog-slider__tab--active');
   }
 
-  Array.prototype.slice.call(catalogTabs).forEach(tab => tab.addEventListener('click', e => switchToNextSlide(e.target.dataset.slide)));
+  [...catalogTabs].forEach(tab => tab.addEventListener('click', e => switchToNextSlide(e.target.dataset.slide)));
   nextSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId + 1));
   prevSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId - 1));
 }
@@ -128,10 +128,10 @@ const serviceSlides = document.querySelectorAll('.services-slider__slide');
 const serviceTabs = document.querySelectorAll('.services-slider__slide-button');
 
 if (serviceSlides.length) {
-  Array.prototype.slice.call(serviceTabs).forEach((tab) => {
+  [...serviceTabs].forEach((tab) => {
     tab.addEventListener('click', (e) => {
-      Array.prototype.slice.call(serviceSlides).forEach(slide => slide.classList.remove('services-slider__slide--active'));
-      Array.prototype.slice.call(serviceTabs).forEach(slide => slide.classList.remove('services-slider__slide-button--active'));
+      [...serviceSlides].forEach(slide => slide.classList.remove('services-slider__slide--active'));
+      [...serviceTabs].forEach(slide => slide.classList.remove('services-slider__slide-button--active'));
 
       serviceSlides[e.target.dataset.slide].classList.add('services-slider__slide--active');
       serviceTabs[e.target.dataset.slide].classList.add('services-slider__slide-button--active');
