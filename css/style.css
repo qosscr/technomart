@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
@@ -84,7 +84,7 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   line-height: 14px;
   border: 1px solid #e5e5e5;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   outline: none;
 }
 
@@ -191,7 +191,7 @@ input[type="radio"].visually-hidden {
 }
 
 .top-line__button:active .top-line__icon {
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .top-line__button--filled {
@@ -461,7 +461,7 @@ input[type="radio"].visually-hidden {
 
 .info-line__button--profile::before {
   content: "";
-  background-image: url('../img/icons/icon-user.svg');
+  background-image: url("../img/icons/icon-user.svg");
   width: 20px;
   height: 18px;
   position: absolute;
@@ -473,7 +473,7 @@ input[type="radio"].visually-hidden {
 .info-line__icon--logout {
   width: 20px;
   height: 17px;
-  background-image: url('../img/icons/icon-logout.svg');
+  background-image: url("../img/icons/icon-logout.svg");
   background-repeat: no-repeat;
   position: absolute;
   right: 10px;
@@ -785,7 +785,7 @@ input[type="radio"].visually-hidden {
 .products__header,
 .products__discount,
 .products__price {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .products {
@@ -872,7 +872,7 @@ input[type="radio"].visually-hidden {
   opacity: .3;
   left: 0;
   margin-left: 12px;
-  background-image: url('../img/icons/icon-cart.svg');
+  background-image: url("../img/icons/icon-cart.svg");
 }
 
 .products__button--buy:hover::before {
@@ -912,7 +912,7 @@ input[type="radio"].visually-hidden {
 }
 
 .products__price {
-  background-image: url('../img/red-button.svg');
+  background-image: url("../img/red-button.svg");
   color: #ffffff;
   width: 141px;
   height: 38px;
@@ -1000,7 +1000,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us__text {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 25px 0 0;
@@ -1128,7 +1128,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-slider__text {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 34px 0 0;
@@ -1325,7 +1325,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 9px;
   right: 9px;
-  background-image: url('../img/icons/icon-close.svg');
+  background-image: url("../img/icons/icon-close.svg");
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -1352,7 +1352,7 @@ input[type="radio"].visually-hidden {
 
 .modal__header--basket::before {
   content: "";
-  background-image: url('../img/icons/icon-mark.svg');
+  background-image: url("../img/icons/icon-mark.svg");
   background-repeat: no-repeat;
   width: 66px;
   height: 66px;
@@ -1446,13 +1446,13 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .breadcrumbs__link--home a {
   width: 15px;
   height: 12px;
-  background-image: url('../img/icons/icon-home.svg');
+  background-image: url("../img/icons/icon-home.svg");
   background-repeat: no-repeat;
 }
 
@@ -1466,7 +1466,7 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 8px;
   height: 12px;
-  background-image: url('../img/icons/icon-right-small.svg');
+  background-image: url("../img/icons/icon-right-small.svg");
   background-repeat: no-repeat;
   margin-right: 16px;
   margin-left: 2px;
@@ -1526,7 +1526,7 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   text-transform: uppercase;
   font-weight: 400;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .filters__header {
@@ -1600,7 +1600,7 @@ input[type="radio"].visually-hidden {
   border: 0;
   padding: 22px 0 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .filters__section:first-of-type {
@@ -1661,23 +1661,23 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__input:disabled + .filters__label {
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .filters__input--checkbox + .filters__label::before {
-  background-image: url('../img/icons/checkbox-off.svg');
+  background-image: url("../img/icons/checkbox-off.svg");
 }
 
 .filters__input--checkbox:checked + .filters__label::before {
-  background-image: url('../img/icons/checkbox-on.svg');
+  background-image: url("../img/icons/checkbox-on.svg");
 }
 
 .filters__input--radio + .filters__label::before {
-  background-image: url('../img/icons/radio-off.svg');
+  background-image: url("../img/icons/radio-off.svg");
 }
 
 .filters__input--radio:checked + .filters__label::before {
-  background-image: url('../img/icons/radio-on.svg');
+  background-image: url("../img/icons/radio-on.svg");
 }
 
 .filters__submit {
@@ -1744,7 +1744,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__toggle {
-  background-image: url('../img/icons/filter-button.svg');
+  background-image: url("../img/icons/filter-button.svg");
   background-repeat: no-repeat;
   width: 20px;
   height: 23px;

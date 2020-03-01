@@ -58,7 +58,7 @@ continueButton.addEventListener('click', (e) => {
   });
 });
 
-window.addEventListener("keydown", (e) => {
+window.addEventListener('keydown', (e) => {
   if (e.keyCode === 27 && document.querySelector('.modal--show')) {
     e.preventDefault();
     document.querySelector('.modal--show').classList.remove('modal--show');
@@ -75,7 +75,7 @@ const email = document.querySelector('[name=email]');
 const message = document.querySelector('[name=message]');
 
 try {
-  storage = localStorage.getItem("name");
+  storage = localStorage.getItem('name');
 } catch (err) {
   isStorageSupport = false;
 }
