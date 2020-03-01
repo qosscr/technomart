@@ -12,7 +12,7 @@
     <header class="header">
       <div class="top-line">
         <div class="wrapper">
-          <a href="" class="logo top-line__logo">
+          <a href="index.html" class="logo top-line__logo">
             <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт">
           </a>
           <form class="top-line__search" action="https://echo.htmlacademy.ru/courses" method="POST" name="search">
@@ -22,13 +22,13 @@
               <svg class="top-line__icon top-line__icon--search" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
             </label>
           </form>
-          <a class="button top-line__button" href="">
+          <a class="button top-line__button top-line__button--bookmark" href="">
             <svg class="top-line__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>
-            Закладки: 0
+            Закладки:&nbsp;<span id="bookmark">0</span>
           </a>
-          <a class="button top-line__button top-line__button--filled" href="">
+          <a class="button top-line__button top-line__button--basket" href="">
             <svg class="top-line__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle  cx="12.5" cy="13.5" r="1.5"/><path  d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
-            Корзина: 10
+            Корзина:&nbsp;<span id="basket">0</span>
           </a>
           <a class="button top-line__button top-line__button--checkout" href="">Оформить заказ</a>
         </div>
@@ -185,8 +185,8 @@
           <ul class="products">
             <li class="products__item">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="1" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="1" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <div class="products__info">
@@ -199,8 +199,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="2" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="2" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <div class="products__info">
@@ -213,8 +213,8 @@
             </li>
             <li class="products__item products__item--new">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="3" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="3" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <div class="products__info">
@@ -226,8 +226,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="4" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="4" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <div class="products__info">
@@ -240,8 +240,8 @@
             </li>
             <li class="products__item products__item--new">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="5" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="5" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <div class="products__info">
@@ -254,8 +254,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="6" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="6" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <div class="products__info">
@@ -267,8 +267,8 @@
             </li>
             <li class="products__item products__item--new">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="7" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="7" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <div class="products__info">
@@ -281,8 +281,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="8" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="8" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <div class="products__info">
@@ -295,8 +295,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button class="button products__button products__button--buy" type="button">Купить</button>
-                <button class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <button data-product-id="9" class="button products__button products__button--buy" type="button">Купить</button>
+                <button data-product-id="9" class="button products__button products__button--bookmark" type="button">В закладки</button>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <div class="products__info">
@@ -331,7 +331,7 @@
 
     <footer class="footer">
       <div class="footer__first-line wrapper">
-        <a href="" class="logo footer__logo">
+        <a href="index.html" class="logo footer__logo">
           <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип компании «Техномарт»">
         </a>
         <ul class="footer__nav">
@@ -389,23 +389,57 @@
     <aside class="modal modal--basket">
       <h2 class="modal__header modal__header--basket">Товар добавлен в корзину!</h2>
       <footer class="modal__footer">
-        <button class="button button--red modal__button" type="button">Оформить заказ</button>
-        <button class="button button--continue modal__button" type="button">Продолжить покупки</button>
+        <a href="" class="button button--red modal__button">Оформить заказ</a>
+        <a href="catalog.html" class="button button--continue modal__button">Продолжить покупки</a>
       </footer>
       <button class="modal__close" type="button" aria-label="Продолжить покупки"></button>
     </aside>
 
     <script>
+      let basket = [];
+      let bookmarks = [];
+
+      const bookmarkField = document.getElementById('bookmark');
+      const bookmarkInfo = document.querySelector('.top-line__button--bookmark');
+
+      const basketField = document.getElementById('basket');
+      const basketInfo = document.querySelector('.top-line__button--basket');
+
+      const bookmarkButtons = document.querySelectorAll('.products__button--bookmark');
+
+      [...bookmarkButtons].forEach(button => {
+        button.addEventListener('click', ({ target }) => {
+          const productId = target.dataset.productId;
+          if (bookmarks.length > 50 || bookmarks.includes(productId)) return;
+
+          bookmarks.push(productId);
+          bookmarkField.textContent = bookmarks.length;
+          bookmarks.length && bookmarkInfo.classList.add('top-line__button--filled');
+        });
+      });
+
       const buyButtons = document.querySelectorAll('.products__button--buy');
       const basketPopup = document.querySelector('.modal--basket');
       const closePopupButtons = document.querySelectorAll('.modal__close');
       const continueButton = document.querySelector('.button--continue');
 
       [...buyButtons].forEach((button) => {
-        button.addEventListener('click', () => basketPopup.classList.add('modal--show'));
+        button.addEventListener('click', ({ target }) => {
+          basketPopup.classList.add('modal--show');
+
+          const productId = target.dataset.productId;
+          if (basket.length > 50 || basket.includes(productId)) return;
+
+          basket.push(productId);
+          basketField.textContent = basket.length;
+          basket.length && basketInfo.classList.add('top-line__button--filled');
+          });
       });
 
-      continueButton.addEventListener('click', () => basketPopup.classList.remove('modal--show'));
+      continueButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        basketPopup.classList.remove('modal--show');
+      });
 
       [...closePopupButtons].forEach((closeButton) => {
         closeButton.addEventListener('click', () => {
