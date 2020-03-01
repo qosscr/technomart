@@ -78,10 +78,10 @@
 
     <main>
       <ul class="breadcrumbs wrapper">
-        <li class="breadcrumbs__link breadcrumbs__link--home"><a href="index.html" aria-label="Главная"></a></li>
-        <li class="breadcrumbs__link"><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs__link"><a href="">Инструмент</a></li>
-        <li class="breadcrumbs__link"><a href="">Перфораторы</a></li>
+        <li class="breadcrumbs__item breadcrumbs__item--home"><a href="index.html" aria-label="Главная"></a></li>
+        <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><a href="">Инструмент</a></li>
+        <li class="breadcrumbs__item"><a href="">Перфораторы</a></li>
       </ul>
 
       <h1 class="catalog-header wrapper">Перфораторы</h1>
@@ -125,7 +125,7 @@
                   <label for="makita" class="filters__label">Makita</label>
                 </li>
                 <li class="filters__option">
-                  <input id="dewalt" class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="dewalt" disabled>
+                  <input id="dewalt" class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="dewalt">
                   <label for="dewalt" class="filters__label">Dewalt</label>
                 </li>
                 <li class="filters__option">
@@ -158,7 +158,7 @@
               <div class="filters__sorting">
                 <ul class="filters__types">
                   <li>
-                    <button class="button filters__sort-button filters__sort-button--active" type="button">По цене</button>
+                    <button class="button filters__sort-button filters__sort-button--active" type="button" disabled>По цене</button>
                   </li>
                   <li>
                     <button class="button filters__sort-button" type="button">По типу</button>
@@ -169,7 +169,7 @@
                 </ul>
                 <ul class="filters__types filters__types--arrows">
                   <li>
-                    <button class="button filters__sort-button filters__sort-button--arrow filters__sort-button--active" type="button">
+                    <button class="button filters__sort-button filters__sort-button--arrow filters__sort-button--active" type="button" disabled>
                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
                     </button>
                   </li>
@@ -185,8 +185,8 @@
           <ul class="products">
             <li class="products__item">
               <div class="products__buttons">
-                <button data-product-id="1" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="1" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="1" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="1" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <div class="products__info">
@@ -199,8 +199,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button data-product-id="2" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="2" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="2" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="2" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <div class="products__info">
@@ -213,8 +213,8 @@
             </li>
             <li class="products__item products__item--new">
               <div class="products__buttons">
-                <button data-product-id="3" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="3" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="3" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="3" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <div class="products__info">
@@ -226,8 +226,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button data-product-id="4" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="4" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="4" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="4" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <div class="products__info">
@@ -240,8 +240,8 @@
             </li>
             <li class="products__item products__item--new">
               <div class="products__buttons">
-                <button data-product-id="5" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="5" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="5" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="5" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <div class="products__info">
@@ -254,8 +254,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button data-product-id="6" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="6" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="6" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="6" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <div class="products__info">
@@ -267,8 +267,8 @@
             </li>
             <li class="products__item products__item--new">
               <div class="products__buttons">
-                <button data-product-id="7" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="7" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="7" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="7" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <div class="products__info">
@@ -281,8 +281,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button data-product-id="8" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="8" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="8" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="8" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <div class="products__info">
@@ -295,8 +295,8 @@
             </li>
             <li class="products__item">
               <div class="products__buttons">
-                <button data-product-id="9" class="button products__button products__button--buy" type="button">Купить</button>
-                <button data-product-id="9" class="button products__button products__button--bookmark" type="button">В закладки</button>
+                <a href="" data-product-id="9" class="button products__button products__button--buy">Купить</a>
+                <a href="" data-product-id="9" class="button products__button products__button--bookmark">В закладки</a>
               </div>
               <img class="products__img" src="img/item-image-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <div class="products__info">
@@ -337,7 +337,7 @@
         <ul class="footer__nav">
           <li class="footer__item"><a href="">Компания</a></li>
           <li class="footer__item"><a href="">Новости</a></li>
-          <li class="footer__item"><a>Каталог</a></li>
+          <li class="footer__item footer__item--active"><a>Каталог</a></li>
           <li class="footer__item"><a href="">Доставка</a></li>
           <li class="footer__item"><a href="">Контакты</a></li>
         </ul>
@@ -345,7 +345,7 @@
       <div class="footer__second-line wrapper">
         <p class="footer__text">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55
+          <a class="footer__phone" href="tel:+78125550555" aria-label="Телефон компании «Техномарт»">+7 (812) 555-05-55</a>
         </p>
         <ul class="footer__nav footer__nav--yellow">
           <li class="footer__item"><a href="">Материалы</a></li>

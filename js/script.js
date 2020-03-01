@@ -10,8 +10,9 @@ const basketInfo = document.querySelector('.top-line__button--basket');
 const bookmarkButtons = document.querySelectorAll('.products__button--bookmark');
 
 [...bookmarkButtons].forEach(button => {
-  button.addEventListener('click', ({ target }) => {
-    const productId = target.dataset.productId;
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const productId = e.target.dataset.productId;
     if (bookmarks.length > 50 || bookmarks.includes(productId)) return;
 
     bookmarks.push(productId);
@@ -31,10 +32,11 @@ const closePopupButtons = document.querySelectorAll('.modal__close');
 const continueButton = document.querySelector('.button--continue');
 
 [...buyButtons].forEach((button) => {
-  button.addEventListener('click', ({ target }) => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
     basketPopup.classList.add('modal--show');
 
-    const productId = target.dataset.productId;
+    const productId = e.target.dataset.productId;
     if (basket.length > 50 || basket.includes(productId)) return;
 
     basket.push(productId);
@@ -87,7 +89,8 @@ if (form) {
   form.addEventListener('submit', () => isStorageSupport && localStorage.clear());
 }
 
-feedbackButton && feedbackButton.addEventListener('click', () => {
+feedbackButton && feedbackButton.addEventListener('click', (e) => {
+  e.preventDefault();
   feedbackPopup.classList.add('modal--show');
   if (isStorageSupport) {
     name.value = localStorage.getItem('name') || '';
