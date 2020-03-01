@@ -103,8 +103,8 @@
           <button class="catalog-slider__control" type="button" aria-label="Предыдущий слайд"></button>
           <button class="catalog-slider__control catalog-slider__control--next" type="button" aria-label="Следующий слайд"></button>
           <ul class="catalog-slider__pagination">
-            <li><button class="catalog-slider__tab" type="button"></button></li>
-            <li><button class="catalog-slider__tab catalog-slider__tab--active" type="button"></button></li>
+            <li><button data-slide="0" class="catalog-slider__tab catalog-slider__tab--active" type="button"></button></li>
+            <li><button data-slide="1" class="catalog-slider__tab" type="button"></button></li>
           </ul>
           <a class="button button--red catalog-slider__button" href="catalog.html">Открыть каталог</a>
         </section>
@@ -244,13 +244,13 @@
           <section class="about-us__slider services-slider">
             <ul class="services-slider__nav">
               <li class="services-slider__item">
-                <button class="button services-slider__slide-button services-slider__slide-button--active" type="button">Доставка</button>
+                <button data-slide="0" class="button services-slider__slide-button services-slider__slide-button--active" type="button">Доставка</button>
               </li>
               <li class="services-slider__item">
-                <button class="button services-slider__slide-button" type="button">Гарантия</button>
+                <button data-slide="1" class="button services-slider__slide-button" type="button">Гарантия</button>
               </li>
               <li class="services-slider__item">
-                <button class="button services-slider__slide-button" type="button">Кредит</button>
+                <button data-slide="2" class="button services-slider__slide-button" type="button">Кредит</button>
               </li>
             </ul>
             <div class="services-slider__slide services-slider__slide--active">
@@ -287,8 +287,9 @@
         </article>
       </div>
       <section class="wrapper wrapper--two-columns">
-        <article class="about-us">
-          <h2 class="about-us__header">Компания «Техномарт»</h2>
+        <h2 class="visually-hidden">О компании</h2>
+        <article class="about-us about-us--company">
+          <h3 class="about-us__header">Компания «Техномарт»</h3>
           <p class="about-us__text">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br>
             строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
@@ -304,8 +305,8 @@
           </ul>
           <a class="button button--red about-us__button" href="">Подробнее о компании</a>
         </article>
-        <article class="about-us">
-          <h2 class="about-us__header">Контакты</h2>
+        <article class="about-us about-us--company">
+          <h3 class="about-us__header">Контакты</h3>
           <p class="about-us__text">
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
@@ -341,7 +342,7 @@
         <ul class="footer__nav footer__nav--yellow">
           <li class="footer__item"><a href="">Материалы</a></li>
           <li class="footer__item"><a href="">Техника</a></li>
-          <li class="footer__item"><a href="">Инструмерты</a></li>
+          <li class="footer__item"><a href="">Инструмерт</a></li>
           <li class="footer__item"><a href="">Спецпредложения</a></li>
         </ul>
       </div>
@@ -364,19 +365,21 @@
             <a class="footer__social-item" href=""><img src="img/icons/insta-icon.svg" alt="Instagram"></a>
           </li>
         </ul>
-        <p class="footer__text">
-          Обратная связь:<br>
-          <a class="footer__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer__text">
-          Разработано —<br>
-          <a class="footer__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
-        </p>
+        <div class="footer__info-block">
+          <p class="footer__text">
+            Обратная связь:<br>
+            <a class="footer__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer__text">
+            Разработано —<br>
+            <a class="footer__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </footer>
 
     <aside class="modal modal--map" aria-label="Карта с расположением офиса компания «Техномарт»">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A239e06bddcf3693390556e6b6750321b4ac65a35c44db38f253a1426a2fffe5f&amp;source=constructor" width="940" height="446" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A239e06bddcf3693390556e6b6750321b4ac65a35c44db38f253a1426a2fffe5f&amp;source=constructor" width="940" height="446"></iframe>
       <button class="modal__close" type="button" aria-label="Закрыть всплывающее окно с картой"></button>
     </aside>
     <aside class="modal modal--feedback" aria-label="Форма обратной связи">
@@ -415,12 +418,10 @@
     <script>
       // popups
       const buyButtons = document.querySelectorAll('.products__button--buy');
-      const feedbackButton = document.querySelector('.button--feedback');
       const mapLink = document.querySelector('.about-us__link');
 
       const basketPopup = document.querySelector('.modal--basket');
       const mapPopup = document.querySelector('.modal--map');
-      const feedbackPopup = document.querySelector('.modal--feedback');
 
       const closePopupButtons = document.querySelectorAll('.modal__close');
       const continueButton = document.querySelector('.button--continue');
@@ -428,7 +429,6 @@
       [...buyButtons].forEach((button) => {
         button.addEventListener('click', () => basketPopup.classList.add('modal--show'));
       });
-      feedbackButton.addEventListener('click', () => feedbackPopup.classList.add('modal--show'));
       mapLink.addEventListener('click', (e) => {
         e.preventDefault();
         mapPopup.classList.add('modal--show');
@@ -442,22 +442,75 @@
         });
       });
 
+      window.addEventListener("keydown", (e) => {
+        if (e.keyCode === 27 && document.querySelector('.modal--show')) {
+          e.preventDefault();
+          document.querySelector('.modal--show').classList.remove('modal--show');
+        }
+      });
+
+      // feedback form
+      const isStorageSupport = true;
+      const feedbackButton = document.querySelector('.button--feedback');
+      const feedbackPopup = document.querySelector('.modal--feedback');
+      const form = document.querySelector('.modal__form');
+      const name = document.querySelector('[name=name]');
+      const email = document.querySelector('[name=email]');
+      const message = document.querySelector('[name=message]');
+
+      try {
+        storage = localStorage.getItem("name");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      form.addEventListener('change', ({ target }) => isStorageSupport && localStorage.setItem(target.name, target.value));
+      form.addEventListener('submit', () => isStorageSupport && localStorage.clear());
+
+      feedbackButton.addEventListener('click', () => {
+        feedbackPopup.classList.add('modal--show');
+        if (isStorageSupport) {
+          name.value = localStorage.getItem('name');
+          email.value = localStorage.getItem('email');
+          message.value = localStorage.getItem('message');
+        }
+        name.focus();
+      });
       // catalog slider
-      let currentCatalogSlideId = 0;
       const catalogSlides = document.querySelectorAll('.catalog-slider__slide');
       const prevSlideButton = document.querySelector('.catalog-slider__control');
       const nextSlideButton = document.querySelector('.catalog-slider__control--next');
+      const catalogTabs = document.querySelectorAll('.catalog-slider__tab');
 
+      let currentCatalogSlideId = 0;
 
       const switchToNextSlide = (id) => {
         [...catalogSlides].forEach(slide => slide.classList.remove('catalog-slider__slide--active'));
+        [...catalogTabs].forEach(slide => slide.classList.remove('catalog-slider__tab--active'));
 
         currentCatalogSlideId = id >= 0 ? id % catalogSlides.length : catalogSlides.length - 1;
-        const nextSlide = catalogSlides[currentCatalogSlideId]
-          .classList.add('catalog-slider__slide--active');
+
+        catalogSlides[currentCatalogSlideId].classList.add('catalog-slider__slide--active');
+        catalogTabs[currentCatalogSlideId].classList.add('catalog-slider__tab--active');
       }
+
+      [...catalogTabs].forEach(tab => tab.addEventListener('click', e => switchToNextSlide(e.target.dataset.slide)));
       nextSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId + 1));
       prevSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId - 1));
+
+      // services slider
+      const serviceSlides = document.querySelectorAll('.services-slider__slide');
+      const serviceTabs = document.querySelectorAll('.services-slider__slide-button');
+
+      [...serviceTabs].forEach((tab) => {
+        tab.addEventListener('click', (e) => {
+          [...serviceSlides].forEach(slide => slide.classList.remove('services-slider__slide--active'));
+          [...serviceTabs].forEach(slide => slide.classList.remove('services-slider__slide-button--active'));
+
+          serviceSlides[e.target.dataset.slide].classList.add('services-slider__slide--active');
+          serviceTabs[e.target.dataset.slide].classList.add('services-slider__slide-button--active');
+        })
+      });
     </script>
   </body>
 </html>

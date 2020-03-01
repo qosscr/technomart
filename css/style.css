@@ -23,9 +23,9 @@ a {
   text-decoration: none;
 }
 
-/* hide yandex traffic icon */
-.ymaps-2-1-74-traffic {
-  display: none;
+
+iframe {
+  border: none;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -121,6 +121,7 @@ input[type="radio"].visually-hidden {
 
 .wrapper--two-columns {
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .logo {
@@ -168,7 +169,7 @@ input[type="radio"].visually-hidden {
 .top-line__icon {
   width: 15px;
   height: 100%;
-  margin: 0 13px 2px 0;
+  margin: 0 13px 3px -9px;
   border: 0;
   fill: #ffffff;
   opacity: 30%;
@@ -318,7 +319,7 @@ input[type="radio"].visually-hidden {
 
 .info-line__icon--phone {
   fill: #B7BFC8;
-  margin: 0 40px 0 15px;
+  margin: 0 40px 0 12px;
   height: 19px;
 }
 
@@ -334,7 +335,7 @@ input[type="radio"].visually-hidden {
 
 .info-line__list {
   list-style: none;
-  margin: 10px 0 0 27px;
+  margin: 8px 0 0 27px;
   padding: 0;
   font-size: 16px;
   line-height: 18px;
@@ -342,7 +343,7 @@ input[type="radio"].visually-hidden {
 }
 
 .info-line__item {
-  margin-right: 31px;
+  margin-right: 32px;
   position: relative;
 }
 
@@ -381,6 +382,7 @@ input[type="radio"].visually-hidden {
 .info-line__auth {
   list-style: none;
   margin: 0;
+  padding: 0;
   margin-left: auto;
   display: flex;
 }
@@ -396,7 +398,7 @@ input[type="radio"].visually-hidden {
 }
 
 .info-line__button--login {
-  width: 121px;
+  min-width: 121px;
 }
 
 .info-line__button--login::before {
@@ -404,7 +406,7 @@ input[type="radio"].visually-hidden {
 
   width: 20px;
   height: 17px;
-  margin-right: 14px;
+  margin: 0 12px 0 -10px;
 
   background-image: url("../img/icons/icon-login.svg");
   background-repeat: no-repeat;
@@ -489,7 +491,7 @@ input[type="radio"].visually-hidden {
 
 .nav__list {
   margin: 40px 0 60px;
-  padding: 0 20px;
+  padding: 0 24px 0 21px;
   list-style: none;
   font-size: 17px;
   line-height: 17px;
@@ -516,7 +518,7 @@ input[type="radio"].visually-hidden {
 .nav__item a {
   display: block;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px 30px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -682,22 +684,23 @@ input[type="radio"].visually-hidden {
   bottom: 23px;
   left: 25px;
   width: 195px;
+  padding-left: 17px;
 }
 
 .catalog-slider__control {
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  left: 20px;
-  top: 44%;
+  left: 26px;
+  top: 113px;
   height: 40px;
   width: 22px;
   background-image: url("../img/icons/icon-left.svg");
 }
 
 .catalog-slider__control--next {
-  left: initial;
-  right: 20px;
+  left: auto;
+  right: 19px;
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -767,6 +770,7 @@ input[type="radio"].visually-hidden {
 
 .popular__button {
   min-width: 253px;
+  padding-right: 6px;
 }
 
 /*
@@ -972,6 +976,16 @@ input[type="radio"].visually-hidden {
   padding-bottom: 0;
 }
 
+.about-us--company {
+  margin-top: 14px;
+  padding-bottom: 86px;
+}
+
+.about-us--seo {
+  padding-bottom: 69px;
+  padding-top: 65px;
+}
+
 .about-us__header {
   margin: 0;
   font-size: 30px;
@@ -984,7 +998,7 @@ input[type="radio"].visually-hidden {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
-  margin: 28px 0 0;
+  margin: 25px 0 0;
 }
 
 .about-us__slider {
@@ -992,7 +1006,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us__map {
-  margin: 35px 0 8px;
+  margin: 32px 0 0;
 }
 
 .about-us__list {
@@ -1000,7 +1014,7 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 20px;
   font-weight: 600;
-  margin: 30px 0 0;
+  margin: 21px 0 0;
   padding: 0;
 }
 
@@ -1039,7 +1053,7 @@ input[type="radio"].visually-hidden {
 .services-slider__nav {
   list-style: none;
   margin: 0;
-  padding: 46px 0;
+  padding: 50px 0;
   position: relative;
   align-self: self-start;
 }
@@ -1061,7 +1075,7 @@ input[type="radio"].visually-hidden {
   background-color: #32425c;
   width: 240px;
   font-size: 21px;
-  padding: 18px 22px;
+  padding: 22px 22px;
   font-weight: 600;
   justify-content: flex-start;
   text-transform: capitalize;
@@ -1083,7 +1097,7 @@ input[type="radio"].visually-hidden {
 .services-slider__slide {
   position: relative;
   flex: 1;
-  padding: 48px 0 0 80px;
+  padding: 56px 0 0 80px;
   min-height: 330px;
   display: none;
   background-color: #f4f7f9;
@@ -1158,7 +1172,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer__item {
-  margin-right: 60px;
+  margin-right: 59px;
 }
 
 .footer__item:last-child {
@@ -1202,7 +1216,7 @@ input[type="radio"].visually-hidden {
 .footer__socials {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 44px;
   display: flex;
   width: 132px;
   justify-content: space-between;
@@ -1234,9 +1248,34 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
 }
 
+.footer__info-block {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  padding-right: 13px;
+}
+
 /*
 * MODAL STYLES
 */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .modal {
   background-color: #ffffff;
@@ -1254,10 +1293,12 @@ input[type="radio"].visually-hidden {
 .modal--show {
   display: block;
   position: fixed;
+  animation: bounce 0.6s;
 }
 
 .modal--basket {
   height: 275px;
+  margin-top: -134px;
 }
 
 .modal--map {
@@ -1387,8 +1428,8 @@ input[type="radio"].visually-hidden {
 */
 
 .breadcrumbs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 19px;
+  margin-bottom: 18px;
   list-style: none;
   padding: 0;
   font-size: 13px;
@@ -1399,14 +1440,14 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs__link--home a {
-  width: 14px;
+  width: 15px;
   height: 12px;
   background-image: url('../img/icons/icon-home.svg');
   background-repeat: no-repeat;
 }
 
 .breadcrumbs__link {
-  margin-right: 16px;
+  margin-right: 14px;
   display: flex;
   align-items: center;
 }
@@ -1417,7 +1458,8 @@ input[type="radio"].visually-hidden {
   height: 12px;
   background-image: url('../img/icons/icon-right-small.svg');
   background-repeat: no-repeat;
-  margin-right: 15px;
+  margin-right: 16px;
+  margin-left: 2px;
 }
 
 .breadcrumbs__link--home::before {
@@ -1447,7 +1489,7 @@ input[type="radio"].visually-hidden {
   background-color: #f2f6f8;
   color: #32425c;
   font-weight: 400;
-  padding: 32px 30px 34px;
+  padding: 32px 30px 29px;
   margin-bottom: 20px;
 }
 
@@ -1488,6 +1530,7 @@ input[type="radio"].visually-hidden {
 
 .filters__sorting {
   display: flex;
+  align-items: center;
 }
 
 .filters__types {
@@ -1498,11 +1541,11 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__types li {
-  margin-right: 65px;
+  margin-right: 68px;
 }
 
 .filters__types--arrows li {
-  margin-right: 21px;
+  margin-right: 24px;
   display: flex;
   align-items: center;
 }
@@ -1545,9 +1588,13 @@ input[type="radio"].visually-hidden {
 
 .filters__section {
   border: 0;
-  padding: 25px 0;
+  padding: 22px 0 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-family: 'PT Sans', Arial, sans-serif;
+}
+
+.filters__section:first-of-type {
+  padding-top: 17px;
 }
 
 .filters__section:last-of-type {
@@ -1555,7 +1602,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__name {
-  margin: 0 0 20px;
+  margin: 0 0 19px;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 17px;
@@ -1570,7 +1617,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__option {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .filters__option:last-child {
@@ -1588,13 +1635,14 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   height: 23px;
   width: 27px;
-  margin-right: 8px;
+  margin-right: 6px;
   opacity: .3;
 }
 
 .filters__input--radio + .filters__label::before {
   width: 25px;
   height: 25px;
+  margin-right: 7px;
 }
 
 .filters__input:not(:disabled) + .filters__label:hover::before,
@@ -1718,7 +1766,8 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination__button {
-  margin: 0 10px 10px 0;
+  margin: 0 9px 10px 0;
+  padding: 11px 31px;
 }
 
 .pagination__button--active {
@@ -1733,5 +1782,5 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination li:not(:last-child) .pagination__button {
-  padding: 11px 16px;
+  padding: 11px 15px;
 }
