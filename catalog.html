@@ -401,57 +401,6 @@
       <button class="modal__close" type="button" aria-label="Продолжить покупки"></button>
     </aside>
 
-    <script>
-      let basket = [];
-      let bookmarks = [];
-
-      const bookmarkField = document.getElementById('bookmark');
-      const bookmarkInfo = document.querySelector('.top-line__button--bookmark');
-
-      const basketField = document.getElementById('basket');
-      const basketInfo = document.querySelector('.top-line__button--basket');
-
-      const bookmarkButtons = document.querySelectorAll('.products__button--bookmark');
-
-      [...bookmarkButtons].forEach(button => {
-        button.addEventListener('click', ({ target }) => {
-          const productId = target.dataset.productId;
-          if (bookmarks.length > 50 || bookmarks.includes(productId)) return;
-
-          bookmarks.push(productId);
-          bookmarkField.textContent = bookmarks.length;
-          bookmarks.length && bookmarkInfo.classList.add('top-line__button--filled');
-        });
-      });
-
-      const buyButtons = document.querySelectorAll('.products__button--buy');
-      const basketPopup = document.querySelector('.modal--basket');
-      const closePopupButtons = document.querySelectorAll('.modal__close');
-      const continueButton = document.querySelector('.button--continue');
-
-      [...buyButtons].forEach((button) => {
-        button.addEventListener('click', ({ target }) => {
-          basketPopup.classList.add('modal--show');
-
-          const productId = target.dataset.productId;
-          if (basket.length > 50 || basket.includes(productId)) return;
-
-          basket.push(productId);
-          basketField.textContent = basket.length;
-          basket.length && basketInfo.classList.add('top-line__button--filled');
-          });
-      });
-
-      continueButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        basketPopup.classList.remove('modal--show');
-      });
-
-      [...closePopupButtons].forEach((closeButton) => {
-        closeButton.addEventListener('click', () => {
-          document.querySelector('.modal--show').classList.remove('modal--show');
-        });
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
