@@ -1776,8 +1776,8 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination__button {
+  padding: 11px 15px;
   margin: 0 9px 10px 0;
-  padding: 11px 31px;
 }
 
 .pagination__button--active {
@@ -1791,6 +1791,6 @@ input[type="radio"].visually-hidden {
   border: 1px solid #ee3643;
 }
 
-.pagination li:not(:last-child) .pagination__button {
-  padding: 11px 15px;
+.pagination__button--next {
+  padding: 11px 31px;
 }
