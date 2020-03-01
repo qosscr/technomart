@@ -68,7 +68,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 // feedback form
-const isStorageSupport = true;
+let isStorageSupport = true;
 const feedbackButton = document.querySelector('.button--feedback');
 const feedbackPopup = document.querySelector('.modal--feedback');
 const form = document.querySelector('.modal__form');
