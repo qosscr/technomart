@@ -1,66 +1,67 @@
-let basket = [];
-let bookmarks = [];
+var basket = [];
+var bookmarks = [];
 
-const bookmarkField = document.getElementById('bookmark');
-const bookmarkInfo = document.querySelector('.top-line__button--bookmark');
+var bookmarkField = document.getElementById('bookmark');
+var bookmarkInfo = document.querySelector('.top-line__button--bookmark');
 
-const basketField = document.getElementById('basket');
-const basketInfo = document.querySelector('.top-line__button--basket');
+var basketField = document.getElementById('basket');
+var basketInfo = document.querySelector('.top-line__button--basket');
 
-const bookmarkButtons = document.querySelectorAll('.products__button--bookmark');
+var bookmarkButtons = document.querySelectorAll('.products__button--bookmark');
 
-[...bookmarkButtons].forEach(button => {
-  button.addEventListener('click', (e) => {
+for (var i = 0; i < bookmarkButtons.length; i++) {
+  bookmarkButtons[i].addEventListener('click', function (e) {
     e.preventDefault();
-    const productId = e.target.dataset.productId;
+    var productId = e.target.dataset.productId;
     if (bookmarks.length > 50 || bookmarks.includes(productId)) return;
 
     bookmarks.push(productId);
     bookmarkField.textContent = bookmarks.length;
     bookmarks.length && bookmarkInfo.classList.add('top-line__button--filled');
   });
-});
+}
 
 // popups
-const buyButtons = document.querySelectorAll('.products__button--buy');
-const mapLink = document.querySelector('.about-us__link');
+var buyButtons = document.querySelectorAll('.products__button--buy');
+var mapLink = document.querySelector('.about-us__link');
 
-const basketPopup = document.querySelector('.modal--basket');
-const mapPopup = document.querySelector('.modal--map');
+var basketPopup = document.querySelector('.modal--basket');
+var mapPopup = document.querySelector('.modal--map');
 
-const closePopupButtons = document.querySelectorAll('.modal__close');
-const continueButton = document.querySelector('.button--continue');
+var closePopupButtons = document.querySelectorAll('.modal__close');
+var continueButton = document.querySelector('.button--continue');
 
-[...buyButtons].forEach((button) => {
-  button.addEventListener('click', (e) => {
+for (var i = 0; i < buyButtons.length; i++) {
+  buyButtons[i].addEventListener('click', function (e) {
     e.preventDefault();
     basketPopup.classList.add('modal--show');
 
-    const productId = e.target.dataset.productId;
+    var productId = e.target.dataset.productId;
     if (basket.length > 50 || basket.includes(productId)) return;
 
     basket.push(productId);
     basketField.textContent = basket.length;
     basket.length && basketInfo.classList.add('top-line__button--filled');
-    });
-});
-mapLink && mapLink.addEventListener('click', (e) => {
+  });
+}
+
+mapLink && mapLink.addEventListener('click', function (e) {
   e.preventDefault();
   mapPopup.classList.add('modal--show');
 });
 
-continueButton.addEventListener('click', (e) => {
+continueButton.addEventListener('click', function (e) {
   e.preventDefault();
   basketPopup.classList.remove('modal--show');
 });
 
-[...closePopupButtons].forEach((closeButton) => {
-  closeButton.addEventListener('click', () => {
+for (var i = 0; i < closePopupButtons.length; i++) {
+  closePopupButtons[i].addEventListener('click', function () {
     document.querySelector('.modal--show').classList.remove('modal--show');
   });
-});
+}
 
-window.addEventListener('keydown', (e) => {
+window.addEventListener('keydown', function (e) {
   if (e.keyCode === 27 && document.querySelector('.modal--show')) {
     e.preventDefault();
     document.querySelector('.modal--show').classList.remove('modal--show');
@@ -68,13 +69,12 @@ window.addEventListener('keydown', (e) => {
 });
 
 // feedback form
-let isStorageSupport = true;
-const feedbackButton = document.querySelector('.button--feedback');
-const feedbackPopup = document.querySelector('.modal--feedback');
-const form = document.querySelector('.modal__form');
-const name = document.querySelector('[name=name]');
-const email = document.querySelector('[name=email]');
-const message = document.querySelector('[name=message]');
+var isStorageSupport = true;
+var feedbackButton = document.querySelector('.button--feedback');
+var feedbackPopup = document.querySelector('.modal--feedback');
+var form = document.querySelector('.modal__form');
+var email = document.querySelector('[name=email]');
+var message = document.querySelector('[name=message]');
 
 try {
   storage = localStorage.getItem('name');
@@ -83,15 +83,19 @@ try {
 }
 
 if (form) {
-  form.addEventListener('change',
-    ({ target }) => isStorageSupport && localStorage.setItem(target.name, target.value)
-  );
-  form.addEventListener('submit', () => isStorageSupport && localStorage.clear());
+  form.addEventListener('change', function (e) {
+    return isStorageSupport && localStorage.setItem(e.target.name, e.target.value)
+  });
+  form.addEventListener('submit', function () {
+    return isStorageSupport && localStorage.clear();
+  });
 }
 
-feedbackButton && feedbackButton.addEventListener('click', (e) => {
+feedbackButton && feedbackButton.addEventListener('click', function (e) {
   e.preventDefault();
   feedbackPopup.classList.add('modal--show');
+  var name = document.querySelector('[name=name]');
+
   if (isStorageSupport) {
     name.value = localStorage.getItem('name') || '';
     email.value = localStorage.getItem('email') || '';
@@ -100,17 +104,17 @@ feedbackButton && feedbackButton.addEventListener('click', (e) => {
   name.focus();
 });
 // catalog slider
-const catalogSlides = document.querySelectorAll('.catalog-slider__slide');
-const prevSlideButton = document.querySelector('.catalog-slider__control');
-const nextSlideButton = document.querySelector('.catalog-slider__control--next');
-const catalogTabs = document.querySelectorAll('.catalog-slider__tab');
+var catalogSlides = document.querySelectorAll('.catalog-slider__slide');
+var prevSlideButton = document.querySelector('.catalog-slider__control');
+var nextSlideButton = document.querySelector('.catalog-slider__control--next');
+var catalogTabs = document.querySelectorAll('.catalog-slider__tab');
 
 if (catalogSlides.length) {
-  let currentCatalogSlideId = 0;
+  var currentCatalogSlideId = 0;
 
-  const switchToNextSlide = (id) => {
-    [...catalogSlides].forEach(slide => slide.classList.remove('catalog-slider__slide--active'));
-    [...catalogTabs].forEach(slide => slide.classList.remove('catalog-slider__tab--active'));
+  var switchToNextSlide = function (id) {
+    document.querySelector('.catalog-slider__slide--active').remove('catalog-slider__slide--active');
+    document.querySelector('.catalog-slider__tab--active').remove('catalog-slider__tab--active');
 
     currentCatalogSlideId = id >= 0 ? id % catalogSlides.length : catalogSlides.length - 1;
 
@@ -118,23 +122,35 @@ if (catalogSlides.length) {
     catalogTabs[currentCatalogSlideId].classList.add('catalog-slider__tab--active');
   }
 
-  [...catalogTabs].forEach(tab => tab.addEventListener('click', e => switchToNextSlide(e.target.dataset.slide)));
-  nextSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId + 1));
-  prevSlideButton.addEventListener('click', () => switchToNextSlide(currentCatalogSlideId - 1));
+  for (var i = 0; i < catalogTabs.length; i++) {
+    catalogTabs[i].forEach(function (tab) {
+      tab.addEventListener('click', function (e) {
+        switchToNextSlide(e.target.dataset.slide);
+      })
+    })
+  }
+  nextSlideButton.addEventListener('click', function () {
+    switchToNextSlide(currentCatalogSlideId + 1);
+  });
+  prevSlideButton.addEventListener('click', function () {
+    switchToNextSlide(currentCatalogSlideId - 1)
+  });
 }
 
 // services slider
-const serviceSlides = document.querySelectorAll('.services-slider__slide');
-const serviceTabs = document.querySelectorAll('.services-slider__slide-button');
+var serviceSlides = document.querySelectorAll('.services-slider__slide');
+var serviceTabs = document.querySelectorAll('.services-slider__slide-button');
 
 if (serviceSlides.length) {
-  [...serviceTabs].forEach((tab) => {
-    tab.addEventListener('click', (e) => {
-      [...serviceSlides].forEach(slide => slide.classList.remove('services-slider__slide--active'));
-      [...serviceTabs].forEach(slide => slide.classList.remove('services-slider__slide-button--active'));
+  for (var i = 0; i < serviceTabs.length; i++) {
+    serviceTabs[i].forEach(function (tab) {
+      tab.addEventListener('click', function (e) {
+        document.querySelector('.services-slider__slide--active').remove('services-slider__slide--active');
+        document.querySelector('.services-slider__slide-button--active').remove('services-slider__slide-button--active');
 
-      serviceSlides[e.target.dataset.slide].classList.add('services-slider__slide--active');
-      serviceTabs[e.target.dataset.slide].classList.add('services-slider__slide-button--active');
-    })
-  });
+        serviceSlides[e.target.dataset.slide].classList.add('services-slider__slide--active');
+        serviceTabs[e.target.dataset.slide].classList.add('services-slider__slide-button--active');
+      })
+    });
+  }
 }
