@@ -13,7 +13,7 @@ for (var i = 0; i < bookmarkButtons.length; i++) {
   bookmarkButtons[i].addEventListener('click', function (e) {
     e.preventDefault();
     var productId = e.target.dataset.productId;
-    if (bookmarks.length > 50 || bookmarks.includes(productId)) return;
+    if (bookmarks.length > 50 || bookmarks.indexOf(productId) > -1) return;
 
     bookmarks.push(productId);
     bookmarkField.textContent = bookmarks.length;
@@ -37,7 +37,7 @@ for (var i = 0; i < buyButtons.length; i++) {
     basketPopup.classList.add('modal--show');
 
     var productId = e.target.dataset.productId;
-    if (basket.length > 50 || basket.includes(productId)) return;
+    if (basket.length > 50 || basket.indexOf(productId) > -1) return;
 
     basket.push(productId);
     basketField.textContent = basket.length;
@@ -113,8 +113,8 @@ if (catalogSlides.length) {
   var currentCatalogSlideId = 0;
 
   var switchToNextSlide = function (id) {
-    document.querySelector('.catalog-slider__slide--active').remove('catalog-slider__slide--active');
-    document.querySelector('.catalog-slider__tab--active').remove('catalog-slider__tab--active');
+    document.querySelector('.catalog-slider__slide--active').classList.remove('catalog-slider__slide--active');
+    document.querySelector('.catalog-slider__tab--active').classList.remove('catalog-slider__tab--active');
 
     currentCatalogSlideId = id >= 0 ? id % catalogSlides.length : catalogSlides.length - 1;
 
@@ -123,10 +123,8 @@ if (catalogSlides.length) {
   }
 
   for (var i = 0; i < catalogTabs.length; i++) {
-    catalogTabs[i].forEach(function (tab) {
-      tab.addEventListener('click', function (e) {
-        switchToNextSlide(e.target.dataset.slide);
-      })
+    catalogTabs[i].addEventListener('click', function (e) {
+      switchToNextSlide(e.target.dataset.slide);
     })
   }
   nextSlideButton.addEventListener('click', function () {
@@ -143,14 +141,12 @@ var serviceTabs = document.querySelectorAll('.services-slider__slide-button');
 
 if (serviceSlides.length) {
   for (var i = 0; i < serviceTabs.length; i++) {
-    serviceTabs[i].forEach(function (tab) {
-      tab.addEventListener('click', function (e) {
-        document.querySelector('.services-slider__slide--active').remove('services-slider__slide--active');
-        document.querySelector('.services-slider__slide-button--active').remove('services-slider__slide-button--active');
+    serviceTabs[i].addEventListener('click', function (e) {
+      document.querySelector('.services-slider__slide--active').classList.remove('services-slider__slide--active');
+      document.querySelector('.services-slider__slide-button--active').classList.remove('services-slider__slide-button--active');
 
-        serviceSlides[e.target.dataset.slide].classList.add('services-slider__slide--active');
-        serviceTabs[e.target.dataset.slide].classList.add('services-slider__slide-button--active');
-      })
-    });
+      serviceSlides[e.target.dataset.slide].classList.add('services-slider__slide--active');
+      serviceTabs[e.target.dataset.slide].classList.add('services-slider__slide-button--active');
+    })
   }
 }
