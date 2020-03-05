@@ -56,6 +56,7 @@ input[type="radio"].visually-hidden {
   justify-content: center;
   padding: 11px;
   line-height: 16px;
+  text-align: center;
   text-transform: uppercase;
   outline: none;
 }
@@ -305,9 +306,8 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
   font-size: 16px;
   line-height: 23px;
-  margin: 0 0 1px 53px;
-  align-self: flex-end;
-  min-width: 197px;
+  margin: 4px 0 1px 53px;
+  max-width: 197px;
 }
 
 .info-line__phone {
@@ -315,13 +315,20 @@ input[type="radio"].visually-hidden {
   align-items: center;
   color: #e9292a;
   width: 270px;
-  height: 45px;
+  min-height: 45px;
   border: 3px solid #ffffff;
+}
+
+.info-line__phone span {
+  flex: 1;
+  margin-right: 20px;
+  justify-content: center;
+  display: flex;
 }
 
 .info-line__icon--phone {
   fill: #B7BFC8;
-  margin: 0 40px 0 12px;
+  margin: 0 12px;
   height: 19px;
 }
 
@@ -329,6 +336,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 24px;
   margin: 5px 0 0;
+  max-width:  270px;
 }
 
 .info-line__profile {
@@ -561,7 +569,7 @@ input[type="radio"].visually-hidden {
 
 .promo__item {
   width: 300px;
-  height: 123px;
+  min-height: 123px;
   padding: 21px 28px 22px 25px;
   display: flex;
   flex-direction: column;
@@ -576,11 +584,13 @@ input[type="radio"].visually-hidden {
   font-size: 24px;
   line-height: 30px;
   margin: 0;
+  max-width: 170px;
 }
 
 .promo__button {
   background: rgba(0, 0, 0, 0.1);
   max-width: 135px;
+  margin-top: 12px;
 }
 
 .promo__button:hover,
@@ -897,7 +907,7 @@ input[type="radio"].visually-hidden {
 .products__header {
   font-size: 18px;
   line-height: 20px;
-  margin: 10px 25px 0;
+  margin: 10px 25px 11px;
   text-align: center;
 }
 
@@ -916,6 +926,8 @@ input[type="radio"].visually-hidden {
 .products__discount {
   color: #a9a9a9;
   text-decoration: line-through;
+  margin-bottom: 10px;
+  margin-top: auto;
 }
 
 .products__price {
