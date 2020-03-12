@@ -89,6 +89,7 @@ if (form) {
   });
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    feedbackPopup.classList.remove("modal__error");
     if (!fullName.value || !email.value || !message.value) {
       feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
       feedbackPopup.classList.add("modal__error");
