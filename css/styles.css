@@ -463,6 +463,10 @@ input[type="radio"].visually-hidden {
   opacity: .3;
 }
 
+.info-line__profile-link:active::before {
+  opacity: .7;
+}
+
 .info-line__profile-link::before {
   content: "";
   background-image: url("../img/icons/icon-user.svg");
@@ -501,7 +505,7 @@ input[type="radio"].visually-hidden {
 
 .nav__list {
   margin: 40px 0 60px;
-  padding: 0 24px 0 21px;
+  padding: 0;
   list-style: none;
   font-size: 17px;
   line-height: 17px;
@@ -528,7 +532,7 @@ input[type="radio"].visually-hidden {
   outline: none;
   display: block;
   text-align: center;
-  padding: 20px 30px;
+  padding: 18px 30px 23px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -1675,6 +1679,7 @@ input[type="radio"].visually-hidden {
   margin: 0 -68px 0 46px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filters__types li {
